@@ -4,6 +4,8 @@ import java.beans.ConstructorProperties;
 
 public class GithubRepoResponse {
 
+    // Work on data fetched from Github API - count stars.
+
     GithubRepo[] repositories;
     private int stargazersSum;
 
