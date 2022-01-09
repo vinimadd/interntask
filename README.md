@@ -4,8 +4,9 @@
 ## Zadanie 3
 
 - Program pobiera dane z API Github
-- Dla wskazanego użytkownika zwraca w formie tablcy informacje - nazwę repozytorium, ilość gwiazdek repozytorium, sumę gwiazdek z wszystkich dostępnych repozytoriów  
-- W projekcie wykorzystany został framework Spring Boot
+- Dla wskazanego użytkownika zwraca w formie tablcy informacje - nazwę repozytorium, ilość gwiazdek repozytorium, sumę gwiazdek z wszystkich dostępnych repozytoriów.  
+- W projekcie wykorzystany został framework Spring Boot.
+- W kodzie dodany został segment v1 URL, który w przypadku wprowadzenia zmian w API umożliwia łatwie odesłanie klienta do używania nowej wersji programu poprzez np. update aplikacji.
  
 ## Uruchomienie
 
@@ -40,6 +41,7 @@ W celu ulepszenia projektu oraz w ramach najlepszych praktyk, w projekcie mogły
 - testy metod
 - użycie biblioteki lombok w klasie odpowiedzialnej za pobieranie wskazanych pól z API
 - zmiana prezentacji danych z tablicy na listę
+- obsługa błędów/wyjątków w przypadku, gdy nie można zwrócić danych z serwera 
 
 
 
