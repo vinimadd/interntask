@@ -2,12 +2,13 @@ package com.vinimadd.interntask.model;
 
 import java.beans.ConstructorProperties;
 
+
 public class GithubRepo {
 
     // Prepare fields needed to be fetched from Github API.
 
-    private int stargazers_count;
-    private String name;
+    private final int stargazers_count;
+    private final String name;
 
     @ConstructorProperties({"stargazers_count", "name"})
     public GithubRepo(int stargazers_count, String name) {
