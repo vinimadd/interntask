@@ -16,9 +16,11 @@ public class HttpGithubRepoRetriever {
         this.restTemplate = restTemplate;
     }
 
-    // Fetch required data from Github API: repository name, repository stars
+    // Fetch required data from Github API: repository name, repository stars + lang, size
 
     public GithubRepo[] getRepos (String username) {
+
+
 
         String resourceUrl = "/users/"+username+"/repos";
         return restTemplate.getForObject(resourceUrl, GithubRepo[].class);

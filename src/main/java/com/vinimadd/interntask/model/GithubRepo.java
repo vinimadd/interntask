@@ -9,11 +9,15 @@ public class GithubRepo {
 
     private final int stargazers_count;
     private final String name;
+    private final String language;
+    private final int size;
 
-    @ConstructorProperties({"stargazers_count", "name"})
-    public GithubRepo(int stargazers_count, String name) {
+    @ConstructorProperties({"stargazers_count", "name", "language", "size"})
+    public GithubRepo(int stargazers_count, String name, String language, int size) {
         this.stargazers_count = stargazers_count;
         this.name = name;
+        this.language = language;
+        this.size = size;
     }
 
     public int getStargazers_count() {
@@ -22,5 +26,13 @@ public class GithubRepo {
 
     public String getName() {
         return name;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
