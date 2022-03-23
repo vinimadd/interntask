@@ -59,23 +59,17 @@ public class GithubRepositories {
         } return totalSizeByLanguage;
     }
 
-    // function to sort hashmap by values
+    // Function to sort hashmap by values -> desc order
     public static HashMap<String, Integer> sortByValue(Map<String, Integer> map) {
-        // Create a list from elements of HashMap
-        List<Map.Entry<String, Integer>> entries = new LinkedList<>(map.entrySet());
-        //Interface Map.Entry<K,V> => The Map.entrySet method returns a collection-view of the map, whose elements are of this class.
-        // The only way to obtain a reference to a map entry is from the iterator of this collection-view.
 
-        // Sort the list
+        List<Map.Entry<String, Integer>> entries = new LinkedList<>(map.entrySet());
+
         Collections.sort(entries, new Comparator<Map.Entry<String, Integer>>() {
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                return (o1.getValue()).compareTo(o2.getValue());
+                return (o2.getValue()).compareTo(o1.getValue());
             }
-            //Compares its two arguments for order
-            //Parameters => o1 - the first object to be compared / o2 - the second object to be compared.
         });
 
-        // put data from sorted list to hashmap
         HashMap<String, Integer> sortedMap = new LinkedHashMap<>();
         for (Map.Entry<String, Integer> entry : entries) {
             sortedMap.put(entry.getKey(), entry.getValue());

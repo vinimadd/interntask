@@ -20,10 +20,8 @@ public class HttpGithubRepoRetriever {
 
     public GithubRepo[] getRepos (String username) {
 
-
-
         String resourceUrl = "/users/"+username+"/repos";
-        return restTemplate.getForObject(resourceUrl, GithubRepo[].class);
 
+        return restTemplate.getForObject(resourceUrl, GithubRepo[].class);
     }
 }
