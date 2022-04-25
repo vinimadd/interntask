@@ -40,7 +40,7 @@ W celu ulepszenia projektu oraz w ramach najlepszych praktyk, w projekcie mogły
 
 - testy metod
 - użycie biblioteki lombok w klasie odpowiedzialnej za pobieranie wskazanych pól z API
-- zmiana prezentacji danych z tablicy na listę
+- zmiana prezentacji danych z tablicy na listę -> done
 - obsługa błędów/wyjątków w przypadku, gdy nie można zwrócić danych z serwera 
 
 
