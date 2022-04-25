@@ -7,19 +7,21 @@ public class GithubRepositories {
 
     // Work on data fetched from Github API - count stars.
 
-    private final GithubRepo[] repositories;
+    private  List<GithubRepo> repositories = new ArrayList<>();
     private final int stargazersSum;
     private Map<String, Integer> totalSizeByLanguage = new HashMap<>();
 
 
     @ConstructorProperties({"repositories"})
-    public GithubRepositories(GithubRepo[] repositories) {
+
+    public GithubRepositories(List<GithubRepo> repositories) {
         this.repositories = repositories;
         this.stargazersSum = countStars();
         this.totalSizeByLanguage = sortByValue(calculateTotalSizeByLanguage());
     }
 
-    public GithubRepo[] getRepositories() {
+
+    public List<GithubRepo> getRepositories() {
         return repositories;
     }
     public int getStargazersSum() {
