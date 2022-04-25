@@ -20,8 +20,7 @@ public class GithubRepoEndpoint {
         this.httpGithubRepoRetriever = httpGithubRepoRetriever;
     }
 
-    // Create path and fetch data by given username.
-    // Return data from Github API.
+    // Create path and fetch data by given username & return data from GitHub API.
 
     @GetMapping(value = "/users/{username}/repos")
 
@@ -29,5 +28,4 @@ public class GithubRepoEndpoint {
         List<GithubRepo> repositories = httpGithubRepoRetriever.getData(username);
         return new GithubRepositories(repositories);
     }
-
 }
