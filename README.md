@@ -25,7 +25,7 @@ localhost:8080/api/v1/users/{username}/repos
 
 uzupełniając pole {username} loginem użytkownika github, dla którego chcemy pobrać dane.
 
-## Część dodatkowa zadania
+## Część dodatkowa zadania -> dodane
 
 Do listowania najpopularniejszych języków programowania oraz sumy ich wielkości użyłabym kolekcji Map, która pozwala na użycie pary klucz:wartość. W omawianym przypadku byłoby to język programowania:wielkość. Dane do pobrania zostałyby przygotowane tak jak w pierwszej części zadania w klasie GithubRepo - zmianie poddane zostałyby pola, które chcemy wykorzystać.
 
@@ -40,7 +40,7 @@ W celu ulepszenia projektu oraz w ramach najlepszych praktyk, w projekcie mogły
 
 - testy metod
 - użycie biblioteki lombok w klasie odpowiedzialnej za pobieranie wskazanych pól z API
-- zmiana prezentacji danych z tablicy na listę
+- zmiana prezentacji danych z tablicy na listę -> done
 - obsługa błędów/wyjątków w przypadku, gdy nie można zwrócić danych z serwera 
 
 
