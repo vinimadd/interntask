@@ -5,7 +5,7 @@ import java.util.*;
 
 public class GithubRepositories {
 
-    // Work on data fetched from Github API - count stars.
+    // Work on data fetched from GitHub API - count stars.
 
     private  List<GithubRepo> repositories = new ArrayList<>();
     private final int stargazersSum;

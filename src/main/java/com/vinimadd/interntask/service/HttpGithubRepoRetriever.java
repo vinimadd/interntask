@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.security.InvalidParameterException;
 import java.util.List;
 
 @Service
@@ -25,16 +26,27 @@ public class HttpGithubRepoRetriever {
     public List<GithubRepo> getData(String username) {
         String resourceUrl = "/users/"+username+"/repos";
 
-        ResponseEntity<List<GithubRepo>> responseEntity =
-                restTemplate.exchange(
-                        resourceUrl,
-                        HttpMethod.GET,
-                        null,
-                        new ParameterizedTypeReference<List<GithubRepo>>() {
-                        });
+//        takeCareWithGlobal();
+//        takeCareWithNotFound();
 
-        System.out.println("Status Code: " + responseEntity.getStatusCode());
+            ResponseEntity<List<GithubRepo>> responseEntity =
+                    restTemplate.exchange(
+                            resourceUrl,
+                            HttpMethod.GET,
+                            null,
+                            new ParameterizedTypeReference<List<GithubRepo>>() {
+                            });
 
-        return responseEntity.getBody();
+            System.out.println("Status Code: " + responseEntity.getStatusCode());
+
+            return responseEntity.getBody();
     }
+
+    private void takeCareWithGlobal(){
+        throw new RuntimeException();
+    }
+    private void takeCareWithNotFound(){
+        throw new InvalidParameterException();
+    }
+
 }

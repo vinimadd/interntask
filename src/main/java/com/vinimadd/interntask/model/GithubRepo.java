@@ -5,7 +5,7 @@ import java.beans.ConstructorProperties;
 
 public class GithubRepo {
 
-    // Prepare fields needed to be fetched from Github API.
+    // Prepare fields needed to be fetched from GitHub API.
 
     private final int stargazers_count;
     private final String name;
