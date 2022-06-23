@@ -24,29 +24,29 @@ public class HttpGithubRepoRetriever {
     // Fetch required data from Github API: repository name, repository stars + lang, size
 
     public List<GithubRepo> getData(String username) {
-        String resourceUrl = "/users/"+username+"/repos";
+        String resourceUrl = "/users/" + username + "/repos";
 
-//        takeCareWithGlobal();
-//        takeCareWithNotFound();
+        ResponseEntity<List<GithubRepo>> responseEntity;
 
-            ResponseEntity<List<GithubRepo>> responseEntity =
+//        takeCareWithNotFound(); -> to check if error occurs
+
+        try {
+            responseEntity =
                     restTemplate.exchange(
                             resourceUrl,
                             HttpMethod.GET,
                             null,
                             new ParameterizedTypeReference<List<GithubRepo>>() {
                             });
-
             System.out.println("Status Code: " + responseEntity.getStatusCode());
+        } catch (Exception globalExceptionHandler) {
+            throw globalExceptionHandler;
+        }
 
-            return responseEntity.getBody();
+        return responseEntity.getBody();
     }
 
-    private void takeCareWithGlobal(){
-        throw new RuntimeException();
-    }
-    private void takeCareWithNotFound(){
+    public void takeCareWithNotFound() {
         throw new InvalidParameterException();
     }
-
 }
