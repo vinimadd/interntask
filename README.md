@@ -39,9 +39,9 @@ Niestety ze względu na małe doświadczenie z implementacją kolekcji Map nie d
 W celu ulepszenia projektu oraz w ramach najlepszych praktyk, w projekcie mogłyby się znaleźć:
 
 - testy metod -> in progress
-- użycie biblioteki lombok w klasie odpowiedzialnej za pobieranie wskazanych pól z API
+- użycie biblioteki lombok w klasie odpowiedzialnej za pobieranie wskazanych pól z API -> done
 - zmiana prezentacji danych z tablicy na listę -> done
-- obsługa błędów/wyjątków w przypadku, gdy nie można zwrócić danych z serwera -> done
+- obsługa błędów/wyjątków w przypadku, gdy nie można zwrócić danych z serwera -> in progress
 
 
 
