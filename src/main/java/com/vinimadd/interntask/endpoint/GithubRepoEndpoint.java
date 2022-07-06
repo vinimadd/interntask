@@ -24,7 +24,13 @@ public class GithubRepoEndpoint {
 
     @GetMapping(value = "/users/{username}/repos")
     public GithubRepositories githubRepo(@PathVariable("username") String username) {
+
             List<GithubRepo> repositories = httpGithubRepoRetriever.getData(username);
+
+            if (repositories.isEmpty()) {
+                return null;
+            }
+
             return new GithubRepositories(repositories);
     }
 }

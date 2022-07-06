@@ -1,8 +1,11 @@
 package com.vinimadd.interntask.model;
 
+import lombok.Data;
+
 import java.beans.ConstructorProperties;
 import java.util.*;
 
+@Data
 public class GithubRepositories {
 
     // Work on data fetched from GitHub API - count stars.
@@ -18,17 +21,6 @@ public class GithubRepositories {
         this.repositories = repositories;
         this.stargazersSum = countStars();
         this.totalSizeByLanguage = sortByValue(calculateTotalSizeByLanguage());
-    }
-
-
-    public List<GithubRepo> getRepositories() {
-        return repositories;
-    }
-    public int getStargazersSum() {
-        return stargazersSum;
-    }
-    public Map<String, Integer> getTotalSizeByLanguage() {
-        return totalSizeByLanguage;
     }
 
     private int countStars() {
